@@ -1,0 +1,21 @@
+
+
+.services-hero-content{
+    position: relative;
+}
+
+.services-hero-img{
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    object-position: top;
+    
+    
+}
+
+.services-hero-inner{
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%,-10%);
+}
