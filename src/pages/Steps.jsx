@@ -1,7 +1,7 @@
-import ServicesHero from '../components/ServicesHero/ServicesHero';
-import ServicesMain from '../components/ServicesMain/ServicesMain';
-import Section from '../components/Section'
-import Inner from '../components/Inner/Inner';
+import ServicesHero from '../components/Steps/ServicesHero/ServicesHero';
+import ServicesMain from '../components/Steps/ServicesMain/ServicesMain';
+import Section from '../components/Common/Section/Section'
+import Inner from '../components/Steps/Inner/Inner';
 
 
 function Steps() {

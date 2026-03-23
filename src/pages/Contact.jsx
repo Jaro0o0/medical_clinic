@@ -1,6 +1,6 @@
-import Why from "../components/Why";
-import ContactHero from "../components/ContactHero/ContactHero";
-import Section from "../components/Section";
+import Why from "../components/Contact/Why/Why";
+import ContactHero from "../components/Contact/ContactHero/ContactHero";
+import Section from "../components/Common/Section/Section";
 import { Box } from "@mui/material";
 
 function contact() {

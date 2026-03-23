@@ -6,13 +6,13 @@ import Images from './pages/Images'
 import Questions from './pages/Questions'
 import Contact from './pages/Contact'
 import Steps from './pages/Steps'
-import Header from './components/Header'
+import Header from './components/Common/Header/Header'
 import Our from './pages/Our'
-import Footer from './components/Footer'
+import Footer from './components/Common/Footer/Footer'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import './index.css'
-import Why from './components/Why'
-import ScrollToTop from './components/ScrollToTop.jsx/ScrollToTop'
+import Why from './components/Contact/Why/Why'
+import ScrollToTop from './components/Common/ScrollToTop/ScrollToTop'
 
 
 

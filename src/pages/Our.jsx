@@ -1,7 +1,7 @@
-import OurHero from "../components/OurHero/OurHero";
-import OurMain from "../components/OurMain/OurMain";
-import OurSecond from "../components/OurSecond/OurSecond";
-import Section from '../components/Section'
+import OurHero from "../components/Our/OurHero/OurHero";
+import OurMain from "../components/Our/OurMain/OurMain";
+import OurSecond from "../components/Our/OurSecond/OurSecond";
+import Section from '../components/Common/Section/Section'
 
 
 function Our() {

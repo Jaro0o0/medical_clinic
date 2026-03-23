@@ -1,13 +1,9 @@
-import About from "../components/About";
-import Hero from "../components/Hero";
-import Offer from "../components/Offer";
-import Section from "../components/Section";
-import Footer from "../components/Footer";
-import Why from "../components/Why";
-import Faq from "../components/Faq";
-import { Typography } from "@mui/material";
-import Testimonies from "../components/Testimonies";
-import Services from "../components/Services/Services";
+import About from "../components/Home/About/About";
+import Hero from "../components/Home/Hero/Hero";
+import Offer from "../components/Home/Offer/Offer";
+import Section from "../components/Common/Section/Section";
+import Testimonies from "../components/Home/Testimonies/Testimonies";
+import Services from "../components/Home/Services/Services";
 
 
 function Home() {

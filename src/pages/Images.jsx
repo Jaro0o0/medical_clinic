@@ -1,7 +1,7 @@
 import { Container, ImageList, ImageListItem, Typography ,Box} from "@mui/material";
-import ImagesHero from "../components/ImagesHero/ImagesHero";
-import ImagesGallery from "../components/ImagesGallery/ImagesGallery";
-import Section from "../components/Section";
+import ImagesHero from "../components/Images/ImagesHero/ImagesHero";
+import ImagesGallery from "../components/Images/ImagesGallery/ImagesGallery";
+import Section from "../components/Common/Section/Section";
 import { motion } from "framer-motion";
 
 
