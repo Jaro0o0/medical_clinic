@@ -10,7 +10,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Container, Drawer } from "@mui/material";
 import {motion} from 'framer-motion';
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 function Header() {
    const [ mobileOpen, setMobileOpen] = useState(false)
@@ -18,15 +18,32 @@ function Header() {
       setMobileOpen(!mobileOpen)
    }
 
+   // HEADER_HEANDLER
+   const [ headerScroll, setHeaderScroll ] = useState(false)
+   useEffect(() =>{
+      const handleScroll = () => {
+         if (window.scrollY > 50){
+            setHeaderScroll(true)
+         } else {
+            setHeaderScroll(false)
+         }
+      }
+      window.addEventListener('scroll', handleScroll)
+      return () => window.removeEventListener('scroll', handleScroll)
+   }, [])
+
       return ( 
          <Box sx={{ flexGrow: 1 }}>
            
-               <AppBar position="fixed"  elevation={1}  sx={{backgroundColor: "transparent", color: "white",transformOrigin: "top"}}  
-                  // initial={{opacity: 0, scaleY: 0, }} 
-                  // animate={{opacity:1, scaleY: 1,  backgroundColor: 'transparent'}}
-                  // transition={{ duration: 0.8, delay: 1.5 }}
-                 
-                  
+               <AppBar 
+                  position="fixed"  
+                  elevation={headerScroll ? 1 : 0}  
+                  sx={{ 
+                     color: headerScroll ? "black" : "white",
+                     transition: 'all 0.5s ease-in-out',
+                     backgroundColor: headerScroll ? 'white' : 'transparent'
+                  }}  
+                  className={headerScroll ? "header--scrolled" : "header"}
                >
                {/* CONTAINER */}
                <Toolbar>
