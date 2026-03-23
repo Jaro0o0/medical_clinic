@@ -21,14 +21,14 @@ function Header() {
       return ( 
          <Box sx={{ flexGrow: 1 }}>
            
-               <AppBar position="fixed"  elevation={1}  sx={{backgroundColor: 'white', color: "#000000",transformOrigin: "top"}} component={motion.div} 
-                  initial={{opacity: 0, scaleY: 0, backgroundColor: 'blue' }} 
-                  animate={{opacity:1, scaleY: 1, backgroundColor: 'white'}}
-                  transition={{ duration: 0.8, delay: 1.5 }}
+               <AppBar position="fixed"  elevation={1}  sx={{backgroundColor: "transparent", color: "white",transformOrigin: "top"}}  
+                  // initial={{opacity: 0, scaleY: 0, }} 
+                  // animate={{opacity:1, scaleY: 1,  backgroundColor: 'transparent'}}
+                  // transition={{ duration: 0.8, delay: 1.5 }}
                  
                   
                >
-               <Container>
+               {/* CONTAINER */}
                <Toolbar>
                   <IconButton
                      size="large"
@@ -53,12 +53,13 @@ function Header() {
                   <Button color="inherit" component={Link} to='o-nas'>O nas</Button>
                   <Button color="inherit" component={Link} to='/galeria'>Galeria</Button>
                   <Button color="inherit" component={Link} to='/faq'>Faq</Button>
-                  <Button variant="contained" component={Link} to='/contact'>Kontakt</Button>
+                  {/* COTACT_BUTTON */}
+                  <Button variant="outlined" component={Link} to='/contact' sx={{color:'white'}}>Kontakt</Button>
 
                    
                  
                </Toolbar>
-                </Container>
+               {/* CONTAINER */}
                </AppBar>
 
                {/* SIDE-BAR */}
