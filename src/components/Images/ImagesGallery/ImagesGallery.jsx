@@ -1,103 +1,73 @@
-import { Container, ImageList, ImageListItem, Typography ,Box} from "@mui/material";
+import { Container, ImageList, ImageListItem, Box } from "@mui/material";
 import { motion } from "framer-motion";
-import GalleryImg from '../../../assets/outside.jpg'
 import './ImagesGallery.css';
 
+// Importing images from assets/imgs
+import img1 from '../../../assets/imgs/image00001.jpeg';
+import img2 from '../../../assets/imgs/image00002.jpeg';
+import img3 from '../../../assets/imgs/image00003.jpeg';
+import img4 from '../../../assets/imgs/IMG_2059.jpeg';
+import img5 from '../../../assets/imgs/IMG_2067.jpeg';
+import img6 from '../../../assets/imgs/IMG_2072.jpeg';
+import img7 from '../../../assets/imgs/IMG_2077.jpeg';
+import img8 from '../../../assets/imgs/IMG_2085.jpeg';
+import img9 from '../../../assets/imgs/IMG_2171.jpeg';
 
 const itemData = [
-  {
-    img: GalleryImg,
-    title: 'Breakfast',
-    author: '@bkristastucchio',
-    rows: 2,
-    cols: 2,
-    featured: true,
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
-    title: 'Burger',
-    author: '@rollelflex_graphy726',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
-    title: 'Camera',
-    author: '@helloimnik',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
-    title: 'Coffee',
-    author: '@nolanissac',
-    cols: 2,
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
-    title: 'Hats',
-    author: '@hjrc33',
-    cols: 2,
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
-    title: 'Honey',
-    author: '@arwinneil',
-    rows: 2,
-    cols: 2,
-    featured: true,
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
-    title: 'Basketball',
-    author: '@tjdragotta',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
-    title: 'Fern',
-    author: '@katie_wasserman',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
-    title: 'Mushrooms',
-    author: '@silverdalex',
-    rows: 2,
-    cols: 2,
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
-    title: 'Tomato basil',
-    author: '@shelleypauls',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
-    title: 'Sea star',
-    author: '@peterlaster',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
-    title: 'Bike',
-    author: '@southside_customs',
-    cols: 2,
-  },
+  { img: img1, title: 'Gabinet 1', cols: 2, rows: 1 },
+  { img: img2, title: 'Gabinet 2', cols: 1, rows: 1 },
+  { img: img3, title: 'Gabinet 3', cols: 1, rows: 1 },
+  { img: img4, title: 'Sprzęt 1', cols: 2, rows: 2 },
+  { img: img5, title: 'Gabinet 4', cols: 1, rows: 1 },
+  { img: img6, title: 'Gabinet 5', cols: 1, rows: 1 },
+  { img: img7, title: 'Sprzęt 2', cols: 2, rows: 2 },
+  { img: img8, title: 'Wnętrze 1', cols: 1, rows: 1 },
+  { img: img9, title: 'Gabinet 6', cols: 3, rows: 2 },
 ];
 
 function ImagesGallery() {
     return ( 
-
-                <Container>
-                    {/* Gallery-Content */}
-                    <Box component={motion.div} initial={{opacity: 0, y: 50}} 
-                     whileInView={{  opacity: 1, y: 0}}
-                    transition={{duration: 0.8}}
-                     viewport={{ once: true}}>
-                        <ImageList sx={{ width:'100%', height:'100%'}} cols={3} variant="memory">
-                            {itemData.map((image,index) => (
-                                <ImageListItem key={index} className="gallery-item">
-                                    <img src={image.img} className="images-gallery-img" alt={image.title}/>
-                                </ImageListItem>
-                            ))}
-                        </ImageList>
-                    </Box>
-                </Container>
-       
-     );
+        <Container maxWidth="xl">
+            {/* Gallery-Content */}
+            <Box component={motion.div} 
+                initial={{ opacity: 0, y: 50 }} 
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                sx={{ py: 8 }}
+            >
+                <ImageList 
+                    sx={{ width: '100%', height: 'auto', overflow: 'hidden' }} 
+                    cols={3} 
+                    gap={24}
+                    variant="quilted"
+                    rowHeight={500}
+                >
+                    {itemData.map((item, index) => (
+                        <ImageListItem 
+                            key={index} 
+                            cols={item.cols} 
+                            rows={item.rows}
+                            className="gallery-item"
+                        >
+                            <img 
+                                src={item.img} 
+                                className="images-gallery-img" 
+                                alt={item.title}
+                                loading="lazy"
+                                style={{
+                                    borderRadius: '16px',
+                                    width: '100%',
+                                    height: '100%',
+                                    objectFit: 'cover'
+                                }}
+                            />
+                        </ImageListItem>
+                    ))}
+                </ImageList>
+            </Box>
+        </Container>
+    );
 }
 
 export default ImagesGallery;

@@ -5,83 +5,61 @@ import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Container, Box } from '@mui/material';
 
-
 function Faq() {
-    return ( 
-      <Box sx={{ padding: '95px 0', }}>
-      <Container>
-        <Accordion defaultExpanded>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel1-content"
-            id="panel1-header"
-          >
-            <Typography component="span">Expanded by default</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-              malesuada lacus ex, sit amet blandit leo lobortis eget.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
-            aria-controls="panel2-content"
-            id="panel2-header"
-          >
-            <Typography component="span">Header</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-              malesuada lacus ex, sit amet blandit leo lobortis eget.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        {/* question-two */}
-        <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel2-content"
-              id="panel2-header"
-            >
-              <Typography component="span">Header</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
-              </Typography>
-            </AccordionDetails>
-        </Accordion>
-          {/* question-four*/}
-        <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel2-content"
-              id="panel2-header"
-            >
-              <Typography component="span">Header</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
-              </Typography>
-            </AccordionDetails>
-                 <AccordionDetails>
-              <Typography>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                malesuada lacus ex, sit amet blandit leo lobortis eget.
-              </Typography>
-            </AccordionDetails>
-        </Accordion>
-    </Container>
-    </Box>
+    const questions = [
+        {
+            question: 'Jak przygotować się do pierwszej wizyty?',
+            answer: 'Na pierwszą wizytę prosimy zabrać ze sobą dokumentację medyczną (jeśli ją posiadasz, np. opisy badań obrazowych), wygodny strój sportowy niekrępujący ruchów oraz obuwie na zmianę.'
+        },
+        {
+            question: 'Czy wymagane jest skierowanie od lekarza?',
+            answer: 'Nie, skierowanie nie jest wymagane. Nasi wykwalifikowani fizjoterapeuci przeprowadzą na początku pierwszej wizyty szczegółowy wywiad i badanie funkcjonalne, aby dobrać odpowiednią terapię.'
+        },
+        {
+            question: 'Ile trwa jedna sesja terapeutyczna?',
+            answer: 'Standardowa sesja trwa zazwyczaj od 30 do 60 minut, w zależności od rodzaju zabiegu oraz indywidualnych potrzeb pacjenta określonych podczas konsultacji.'
+        },
+        {
+            question: 'Jak ubrać się na zabieg lub ćwiczenia?',
+            answer: 'Najlepiej sprawdzi się luźny strój sportowy (koszulka, legginsy lub spodenki). Ważne jest, aby terapeuta miał swobodny dostęp do okolicy ciała poddawanej zabiegowi.'
+        },
+        {
+            question: 'Jakie są przeciwwskazania do masażu lub zabiegów?',
+            answer: 'Głównymi przeciwwskazaniami są: gorączka, ostre stany zapalne, choroby zakaźne, nieuregulowane nadciśnienie oraz niektóre choroby nowotworowe. O wszelkich dolegliwościach należy poinformować terapeutę przed rozpoczęciem zabiegu.'
+        },
+        {
+            question: 'Czy po zabiegu mogą wystąpić reakcje bólowe?',
+            answer: 'Tak, po niektórych terapiach manualnych lub intensywnych masażach może wystąpić tzw. ból pozabiegowy (podobnie jak "zakwasy"), który zazwyczaj mija w ciągu 24-48 godzin.'
+        }
+    ];
 
-     );
+    return (
+        <Box sx={{ padding: '95px 0' }}>
+            <Container>
+                <Typography variant="h3" align="center" gutterBottom sx={{ mb: 6, fontWeight: 'bold' }}>
+                    Często zadawane pytania
+                </Typography>
+                {questions.map((item, index) => (
+                    <Accordion key={index} sx={{ mb: 1, boxShadow: 1, '&:before': { display: 'none' } }}>
+                        <AccordionSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls={`panel${index}-content`}
+                            id={`panel${index}-header`}
+                        >
+                            <Typography sx={{ fontWeight: '500', fontSize: '1.1rem' }}>
+                                {item.question}
+                            </Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            <Typography color="text.secondary">
+                                {item.answer}
+                            </Typography>
+                        </AccordionDetails>
+                    </Accordion>
+                ))}
+            </Container>
+        </Box>
+    );
 }
 
 export default Faq;
