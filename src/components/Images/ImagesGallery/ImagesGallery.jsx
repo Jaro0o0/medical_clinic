@@ -12,22 +12,26 @@ import img6 from '../../../assets/imgs/IMG_2072.jpeg';
 import img7 from '../../../assets/imgs/IMG_2077.jpeg';
 import img8 from '../../../assets/imgs/IMG_2085.jpeg';
 import img9 from '../../../assets/imgs/IMG_2171.jpeg';
+import img10 from '../../../assets/imgs/IMG_2062.jpeg';
 
 const itemData = [
-  { img: img1, title: 'Gabinet 1', cols: 2, rows: 1 },
-  { img: img2, title: 'Gabinet 2', cols: 1, rows: 1 },
+  { img: img1, title: 'Gabinet 1', cols: 2, rows: 2 },
+  { img: img10, title: 'Gabinet 6', cols: 1, rows: 1 },
   { img: img3, title: 'Gabinet 3', cols: 1, rows: 1 },
   { img: img4, title: 'Sprzęt 1', cols: 2, rows: 2 },
   { img: img5, title: 'Gabinet 4', cols: 1, rows: 1 },
   { img: img6, title: 'Gabinet 5', cols: 1, rows: 1 },
+  
   { img: img7, title: 'Sprzęt 2', cols: 2, rows: 2 },
   { img: img8, title: 'Wnętrze 1', cols: 1, rows: 1 },
-  { img: img9, title: 'Gabinet 6', cols: 3, rows: 2 },
+  { img: img9, title: 'Gabinet 6', cols: 1, rows: 1 },
+  
+   { img: img2, title: 'Gabinet 2', cols: 3, rows: 2 },
 ];
 
 function ImagesGallery() {
     return ( 
-        <Container maxWidth="xl">
+        <Container maxWidth='xl'>
             {/* Gallery-Content */}
             <Box component={motion.div} 
                 initial={{ opacity: 0, y: 50 }} 
@@ -59,7 +63,8 @@ function ImagesGallery() {
                                     borderRadius: '16px',
                                     width: '100%',
                                     height: '100%',
-                                    objectFit: 'cover'
+                                    objectFit: 'cover',
+                                    
                                 }}
                             />
                         </ImageListItem>

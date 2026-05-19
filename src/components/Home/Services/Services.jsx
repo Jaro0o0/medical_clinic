@@ -7,21 +7,21 @@ import { fadeInUp, staggerContainer, hoverScale, viewportConfig } from '../../..
 
 const servicesData = [
     {
-        title: "Terapia manualna",
-        description: "Skuteczna metoda leczenia bólu kręgosłupa i stawów. Przywraca prawidłową ruchomość i zmniejsza napięcie mięśniowe.",
-        price: "220 zł",
+        title: "Masaż limfatyczny ręczny",
+        description: "Pobudza krążenie limfy, redukuje obrzęki i wspomaga detoksykację.",
+        price: "80zł",
         img: ServiceImg
     },
     {
-        title: "Osteopatia",
-        description: "Holistyczne podejście do zdrowia, skupiające się na powiązaniach między strukturą a funkcją organizmu.",
-        price: "250 zł",
+        title: "Laser",
+        description: "Zastosowanie wiązki laserowej w celu przyspieszenia gojenia i redukcji stanu zapalnego.",
+        price: "15zł ",
         img: ServiceImg
     },
     {
-        title: "Masaż leczniczy",
-        description: "Intensywny masaż mający na celu złagodzenie bólu, poprawę krążenia i rozluźnienie spiętych tkanek.",
-        price: "180 zł",
+        title: "Elektroterapia",
+        description: "Leczenie prądami o różnej częstotliwości w celu uśmierzenia bólu i stymulacji mięśni.",
+        price: "15zł",
         img: ServiceImg
     }
 ];
