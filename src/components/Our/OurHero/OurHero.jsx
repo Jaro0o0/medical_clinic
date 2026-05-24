@@ -69,7 +69,7 @@ function OurHero() {
                             lineHeight: 1.6
                         }}
                     >
-                        Od ponad dekady wspieramy naszych pacjentów w powrocie do pełnej sprawności, łącząc nowoczesną technologię z holistycznym podejściem.
+                        Od ponad dekady wspieramy naszych pacjentów w powrocie do pełnej sprawności.
                     </Typography>
                 </Box>
             </Container>
