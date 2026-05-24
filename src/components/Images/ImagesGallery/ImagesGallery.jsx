@@ -1,4 +1,4 @@
-import { Container, ImageList, ImageListItem, Box } from "@mui/material";
+import { Container, ImageList, ImageListItem, Box, useTheme, useMediaQuery } from "@mui/material";
 import { motion } from "framer-motion";
 import './ImagesGallery.css';
 
@@ -30,6 +30,13 @@ const itemData = [
 ];
 
 function ImagesGallery() {
+    const theme = useTheme();
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const isTablet = useMediaQuery(theme.breakpoints.down('md'));
+
+    const cols = isMobile ? 1 : (isTablet ? 2 : 3);
+    const rowHeight = isMobile ? 300 : (isTablet ? 400 : 500);
+
     return ( 
         <Container maxWidth='xl'>
             {/* Gallery-Content */}
@@ -38,37 +45,46 @@ function ImagesGallery() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                sx={{ py: 8 }}
+                sx={{ py: { xs: 4, md: 8 } }}
             >
                 <ImageList 
-                    sx={{ width: '100%', height: 'auto', overflow: 'hidden' }} 
-                    cols={3} 
-                    gap={24}
+                    sx={{ 
+                        width: '100%', 
+                        height: 'auto', 
+                        overflow: 'hidden',
+                        margin: 0
+                    }} 
+                    cols={cols} 
+                    gap={isMobile ? 12 : 24}
                     variant="quilted"
-                    rowHeight={500}
+                    rowHeight={rowHeight}
                 >
-                    {itemData.map((item, index) => (
-                        <ImageListItem 
-                            key={index} 
-                            cols={item.cols} 
-                            rows={item.rows}
-                            className="gallery-item"
-                        >
-                            <img 
-                                src={item.img} 
-                                className="images-gallery-img" 
-                                alt={item.title}
-                                loading="lazy"
-                                style={{
-                                    borderRadius: '16px',
-                                    width: '100%',
-                                    height: '100%',
-                                    objectFit: 'cover',
-                                    
-                                }}
-                            />
-                        </ImageListItem>
-                    ))}
+                    {itemData.map((item, index) => {
+                        const itemCols = isMobile ? 1 : Math.min(item.cols || 1, cols);
+                        const itemRows = isMobile ? 1 : (item.rows || 1);
+                        
+                        return (
+                            <ImageListItem 
+                                key={index} 
+                                cols={itemCols} 
+                                rows={itemRows}
+                                className="gallery-item"
+                            >
+                                <img 
+                                    src={item.img} 
+                                    className="images-gallery-img" 
+                                    alt={item.title}
+                                    loading="lazy"
+                                    style={{
+                                        borderRadius: '16px',
+                                        width: '100%',
+                                        height: '100%',
+                                        objectFit: 'cover',
+                                    }}
+                                />
+                            </ImageListItem>
+                        );
+                    })}
                 </ImageList>
             </Box>
         </Container>
