@@ -68,7 +68,7 @@ function ContactHero() {
                             lineHeight: 1.6
                         }}
                     >
-                        Jesteśmy tutaj, aby Ci pomóc. Skontaktuj się z nami telefonicznie, mailowo lub odwiedź nas osobiście w naszym gabinecie.
+                        Skontaktuj się z nami telefonicznie, mailowo lub odwiedź nas osobiście w naszym gabinecie.
                     </Typography>
                 </Box>
             </Container>

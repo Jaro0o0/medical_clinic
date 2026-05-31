@@ -1,4 +1,4 @@
-import Why from "../components/Contact/Why/Why";
+import Form from "../components/Contact/Why/Why";
 import ContactHero from "../components/Contact/ContactHero/ContactHero";
 import Section from "../components/Common/Section/Section";
 import { Box } from "@mui/material";
@@ -8,7 +8,7 @@ function contact() {
         <>
          <ContactHero/>
          <Section>
-            <Why/>
+            <Form/>
          </Section>
          
             <Box sx={{paddingTop: { xs: '60px', md: '120px' }}}>

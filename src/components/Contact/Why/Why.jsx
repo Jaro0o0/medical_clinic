@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
 
 
-function Why() {
+function Form() {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
 
@@ -116,4 +116,4 @@ function Why() {
     );
 }
 
-export default Why;
+export default Form;
