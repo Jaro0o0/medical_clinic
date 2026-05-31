@@ -4,13 +4,16 @@ import './Why.css'
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
 
+
 function Why() {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
+
     const onSubmit = (data) => {
         const loadingToast = toast.loading('Wysyłanie wiadomości...');
+       
         
-        emailjs.send('service_0k4dy3d', 'template_uohgoor', data, '0ieLgYHaimhaTSLGo')
+        emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, data, import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
             .then(() => {
                 toast.success('Wiadomość została wysłana pomyślnie!', { id: loadingToast });
                 reset();
@@ -19,7 +22,7 @@ function Why() {
                 toast.error('Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie.', { id: loadingToast });
             });
     }
-
+    
     return (
         <Container sx={{ position: "relative" }}>
             <Typography component='p' color="primary" gutterBottom>FAQ</Typography>
@@ -99,7 +102,7 @@ function Why() {
                         </Box>
                         <Box>
                             <Typography variant="h4" gutterBottom className="second-grid-header">Godziny otwarcia</Typography>
-                            <Typography variant="body1" color="#444">Poniedziałek - Piątek 8:00 - 16:00</Typography>
+                            <Typography variant="body1" color="#444">Poniedziałek - Piątek 8:00 - 18:00</Typography>
                         </Box>
                         <Box>
                             <Typography variant="h4" gutterBottom className="second-grid-header">Kontakt</Typography>

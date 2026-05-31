@@ -69,7 +69,7 @@ function OurHero() {
                             lineHeight: 1.6
                         }}
                     >
-                        Od ponad dekady wspieramy naszych pacjentów w powrocie do pełnej sprawności.
+                        Od ponad dekady wspieramy naszych pacjentów.
                     </Typography>
                 </Box>
             </Container>

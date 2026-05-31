@@ -68,7 +68,7 @@ function QuestionsHero() {
                             lineHeight: 1.6
                         }}
                     >
-                        Znajdź odpowiedzi na najpopularniejsze pytania dotyczące rehabilitacji, przebiegu wizyt oraz przygotowania do zabiegów.
+                        Znajdź odpowiedzi na najpopularniejsze pytania dotyczące rehabilitacji.
                     </Typography>
                 </Box>
             </Container>
