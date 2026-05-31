@@ -1,5 +1,5 @@
 import { Box, Container, Typography, Grid, Paper, Stack } from "@mui/material";
-import './OurSecond.css'
+import './AboutSecond.css'
 import HistoryImg from '../../../assets/outside.jpg'
 import TeamImg from '../../../assets/careers.jpg'
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
@@ -14,7 +14,7 @@ const teamFeatures = [
     "Specjaliści rehabilitacji sportowej"
 ];
 
-function OurSecond() {
+function AboutSecond() {
     return ( 
         <Container sx={{ py: 8 }}>
             <Grid container spacing={10}>
@@ -48,8 +48,8 @@ function OurSecond() {
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={6}>
-                            <Box className="our-second-img-container">
-                                <img className="our-second-img" src={HistoryImg} alt="Nasza historia" />
+                            <Box className="about-second-img-container">
+                                <img className="about-second-img" src={HistoryImg} alt="Nasza historia" />
                             </Box>
                         </Grid>
                     </Grid>
@@ -59,8 +59,8 @@ function OurSecond() {
                 <Grid item xs={12}>
                     <Grid container spacing={6} alignItems="center" direction={{ xs: 'column-reverse', md: 'row' }}>
                         <Grid item xs={12} md={6}>
-                            <Box className="our-second-img-container">
-                                <img className="our-second-img" src={TeamImg} alt="Nasz zespół" />
+                            <Box className="about-second-img-container">
+                                <img className="about-second-img" src={TeamImg} alt="Nasz zespół" />
                             </Box>
                         </Grid>
                         <Grid item xs={12} md={6}>
@@ -102,4 +102,4 @@ function OurSecond() {
      );
 }
 
-export default OurSecond;
+export default AboutSecond;

@@ -1,4 +1,4 @@
-.our-hero-wrapper {
+.about-hero-wrapper {
     position: relative;
     width: 100%;
     height: 70vh;
@@ -8,7 +8,7 @@
     align-items: center;
 }
 
-.our-hero-bg {
+.about-hero-bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -16,14 +16,14 @@
     height: 100%;
 }
 
-.our-header-img {
+.about-header-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
 
-.our-hero-overlay {
+.about-hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -37,12 +37,12 @@
     );
 }
 
-.our-hero-container {
+.about-hero-container {
     position: relative;
     z-index: 2;
 }
 
-.our-hero-inner {
+.about-hero-inner {
     text-align: center;
 }
 
@@ -57,7 +57,7 @@
 }
 
 @media (max-width: 600px) {
-    .our-hero-wrapper {
+    .about-hero-wrapper {
         height: 60vh;
     }
 }

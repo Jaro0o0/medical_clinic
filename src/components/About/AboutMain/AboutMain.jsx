@@ -1,12 +1,12 @@
 import { Container, Typography, Grid, Box, Button } from "@mui/material";
-import OurImg from '../../../assets/outside.jpg'
-import './OurMain.css'
+import AboutImg from '../../../assets/outside.jpg'
+import './AboutMain.css'
 import { motion } from "framer-motion";
 import { fadeInUp, fadeInLeft, fadeInRight, viewportConfig } from '../../../animations';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Link } from "react-router";
 
-function OurMain() {
+function AboutMain() {
     return ( 
         <Container sx={{ py: { xs: 4, md: 8 } }}>
             <Grid container spacing={8} alignItems="center">
@@ -17,10 +17,10 @@ function OurMain() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={viewportConfig}
-                        className="our-main-img-wrapper"
+                        className="about-main-img-wrapper"
                     >
-                        <Box className="our-main-img-decoration" />
-                        <img src={OurImg} className="our-main-img" alt="Nasze wnętrze"/>
+                        <Box className="about-main-img-decoration" />
+                        <img src={AboutImg} className="about-main-img" alt="Nasze wnętrze"/>
                     </Box>
                 </Grid>
                 
@@ -72,4 +72,4 @@ function OurMain() {
      );
 }
 
-export default OurMain;
+export default AboutMain;

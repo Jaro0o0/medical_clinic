@@ -5,7 +5,7 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import EmojiObjectsOutlinedIcon from '@mui/icons-material/EmojiObjectsOutlined';
 import { motion } from "framer-motion";
 import { fadeInUp, viewportConfig } from "../../../animations";
-import './OurValues.css';
+import './AboutValues.css';
 
 const values = [
     {
@@ -30,7 +30,7 @@ const values = [
     }
 ];
 
-function OurValues() {
+function AboutValues() {
     return (
         <Box sx={{ py: 10, backgroundColor: 'background.alt' }}>
             <Container>
@@ -88,4 +88,4 @@ function OurValues() {
     );
 }
 
-export default OurValues;
+export default AboutValues;

@@ -5,7 +5,7 @@ import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
 import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
 import HealthAndSafetyOutlinedIcon from '@mui/icons-material/HealthAndSafetyOutlined';
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
-import './OurStats.css';
+import './AboutStats.css';
 
 const stats = [
     { icon: <AccessTimeOutlinedIcon />, value: "10+", label: "Lat Doświadczenia" },
@@ -14,9 +14,9 @@ const stats = [
     { icon: <EmojiEventsOutlinedIcon />, value: "100%", label: "Zaangażowania" }
 ];
 
-function OurStats() {
+function AboutStats() {
     return (
-        <Box className="our-stats-wrapper">
+        <Box className="about-stats-wrapper">
             <Container>
                 <Grid container spacing={4}>
                     {stats.map((stat, index) => (
@@ -46,4 +46,4 @@ function OurStats() {
     );
 }
 
-export default OurStats;
+export default AboutStats;

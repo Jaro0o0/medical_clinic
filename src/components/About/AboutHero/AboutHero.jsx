@@ -1,25 +1,25 @@
 import { Typography, Box, Container } from '@mui/material';
-import OurHeaderImg from '../../../assets/outside.jpg'
-import './OurHero.css'
+import AboutHeaderImg from '../../../assets/outside.jpg'
+import './AboutHero.css'
 import { motion } from 'framer-motion';
 import { fadeInUp, fadeIn } from '../../../animations';
 
-function OurHero() {
+function AboutHero() {
     return ( 
-        <Box className='our-hero-wrapper'>
+        <Box className='about-hero-wrapper'>
             <Box
                 component={motion.div}
                 variants={fadeIn}
                 initial="hidden"
                 animate="visible"
-                className='our-hero-bg'
+                className='about-hero-bg'
             >
-                <img className='our-header-img' src={OurHeaderImg} alt="Kormedic background" />
-                <Box className='our-hero-overlay' />
+                <img className='about-header-img' src={AboutHeaderImg} alt="Kormedic background" />
+                <Box className='about-hero-overlay' />
             </Box>
             
-            <Container className='our-hero-container'>
-                <Box className='our-hero-inner'>
+            <Container className='about-hero-container'>
+                <Box className='about-hero-inner'>
                     <Typography 
                         component={motion.span}
                         variant="overline"
@@ -85,4 +85,4 @@ function OurHero() {
      );
 }
 
-export default OurHero;
+export default AboutHero;

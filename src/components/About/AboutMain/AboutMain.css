@@ -1,10 +1,10 @@
-.our-main-img-wrapper {
+.about-main-img-wrapper {
     position: relative;
     padding-left: 20px;
     padding-bottom: 20px;
 }
 
-.our-main-img-decoration {
+.about-main-img-decoration {
     position: absolute;
     bottom: -20px;
     left: -20px;
@@ -16,7 +16,7 @@
     opacity: 0.1;
 }
 
-.our-main-img {
+.about-main-img {
     width: 100%;
     height: auto;
     border-radius: 24px;
@@ -27,13 +27,13 @@
 }
 
 @media (max-width: 900px) {
-    .our-main-img-wrapper {
+    .about-main-img-wrapper {
         padding-left: 0;
         padding-bottom: 0;
         margin-bottom: 40px;
     }
     
-    .our-main-img-decoration {
+    .about-main-img-decoration {
         display: none;
     }
 }

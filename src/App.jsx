@@ -7,7 +7,7 @@ import Questions from './pages/Questions'
 import Contact from './pages/Contact'
 import Steps from './pages/Steps'
 import Header from './components/Common/Header/Header'
-import Our from './pages/Our'
+import About from './pages/About'
 import Footer from './components/Common/Footer/Footer'
 import { BrowserRouter, Route, Routes } from 'react-router'
 import './index.css'
@@ -26,7 +26,7 @@ function App() {
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/faq' element={<Questions/>}/>
           <Route path='/oferta' element={<Steps/>}/>
-          <Route path='/o-nas' element={<Our/>}/>
+          <Route path='/o-nas' element={<About/>}/>
         </Routes>
         <Footer/>
     </BrowserRouter>

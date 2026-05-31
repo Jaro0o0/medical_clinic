@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import { fadeInUp, viewportConfig } from "../../../animations";
 import { Link } from "react-router";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import './OurCTA.css';
+import './AboutCTA.css';
 
-function OurCTA() {
+function AboutCTA() {
     return (
-        <Box className="our-cta-wrapper">
+        <Box className="about-cta-wrapper">
             <Container>
                 <Box 
                     component={motion.div}
@@ -15,7 +15,7 @@ function OurCTA() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={viewportConfig}
-                    className="our-cta-inner"
+                    className="about-cta-inner"
                 >
                     <Typography variant="h2" sx={{ color: 'white', mb: 2, fontWeight: 800 }}>
                         Gotowy na powrót do pełnej sprawności?
@@ -40,4 +40,4 @@ function OurCTA() {
     );
 }
 
-export default OurCTA;
+export default AboutCTA;
