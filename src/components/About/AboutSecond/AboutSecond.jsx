@@ -6,7 +6,7 @@ import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 import Diversity3OutlinedIcon from '@mui/icons-material/Diversity3Outlined';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import { motion } from "framer-motion";
-import { fadeInUp, viewportConfig } from '../../../animations';
+import { fadeInUp, viewportConfig } from '../../../animations/animations';
 
 const teamFeatures = [
     "Dyplomowani fizjoterapeuci",

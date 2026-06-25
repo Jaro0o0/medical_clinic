@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import { fadeInUp, viewportConfig } from "../../../animations";
+import { fadeInUp, viewportConfig } from "../../../animations/animations";
 import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
 import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
 import HealthAndSafetyOutlinedIcon from '@mui/icons-material/HealthAndSafetyOutlined';

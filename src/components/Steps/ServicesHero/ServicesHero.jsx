@@ -2,7 +2,7 @@ import { Box, Container, Typography } from "@mui/material";
 import ServicesHeroBackground from "../../../assets/outside.jpg";
 import './ServicesHero.css'
 import { motion } from "framer-motion";
-import { fadeInUp, fadeIn } from '../../../animations';
+import { fadeInUp, fadeIn } from '../../../animations/animations';
 
 function ServicesHero() {
     return (  

@@ -2,7 +2,7 @@ import ContactHeroImg from '../../../assets/outside.jpg'
 import './ContactHero.css'
 import { Box, Typography, Container } from '@mui/material';
 import { motion } from 'framer-motion';
-import { fadeInUp, fadeIn } from '../../../animations';
+import { fadeInUp, fadeIn } from '../../../animations/animations';
 
 function ContactHero() {
     return (

@@ -2,7 +2,7 @@ import { Container, Typography, Box, Button } from "@mui/material";
 import IMG from '../../../assets/outside.jpg'
 import './About.css'
 import { motion } from "framer-motion";
-import { fadeInUp, fadeInLeft, fadeInRight, viewportConfig } from '../../../animations';
+import { fadeInUp, fadeInLeft, fadeInRight, viewportConfig } from '../../../animations/animations';
 import { Link } from 'react-router';
 
 function About() {

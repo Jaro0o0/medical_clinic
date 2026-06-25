@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined';
 import VerifiedUserOutlinedIcon from '@mui/icons-material/VerifiedUserOutlined';
 import SpeedOutlinedIcon from '@mui/icons-material/SpeedOutlined';
-import { fadeInUp, staggerContainer, viewportConfig } from '../../../animations';
+import { fadeInUp, staggerContainer, viewportConfig } from '../../../animations/animations';
 
 const features = [
     {

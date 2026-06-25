@@ -2,7 +2,7 @@ import { Container, Typography, Grid, Box, Button } from "@mui/material";
 import AboutImg from '../../../assets/outside.jpg'
 import './AboutMain.css'
 import { motion } from "framer-motion";
-import { fadeInUp, fadeInLeft, fadeInRight, viewportConfig } from '../../../animations';
+import { fadeInUp, fadeInLeft, fadeInRight, viewportConfig } from '../../../animations/animations';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Link } from "react-router";
 

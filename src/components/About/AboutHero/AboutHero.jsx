@@ -2,7 +2,7 @@ import { Typography, Box, Container } from '@mui/material';
 import AboutHeaderImg from '../../../assets/outside.jpg'
 import './AboutHero.css'
 import { motion } from 'framer-motion';
-import { fadeInUp, fadeIn } from '../../../animations';
+import { fadeInUp, fadeIn } from '../../../animations/animations';
 
 function AboutHero() {
     return ( 

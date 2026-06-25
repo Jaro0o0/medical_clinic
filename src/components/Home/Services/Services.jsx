@@ -3,7 +3,7 @@ import './Services.css'
 import ServiceImg from '../../../assets/careers.jpg'
 import { motion } from "framer-motion";
 import { Link } from "react-router";
-import { fadeInUp, staggerContainer, hoverScale, viewportConfig } from '../../../animations';
+import { fadeInUp, staggerContainer, hoverScale, viewportConfig } from '../../../animations/animations';
 // IMGS
 import Img_three from '../../../assets/imgs/services/three.jpg'
 import Img_L from '../../../assets/imgs/services/laser.jpeg'

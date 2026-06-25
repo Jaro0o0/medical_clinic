@@ -4,7 +4,7 @@ import AutoGraphOutlinedIcon from '@mui/icons-material/AutoGraphOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import EmojiObjectsOutlinedIcon from '@mui/icons-material/EmojiObjectsOutlined';
 import { motion } from "framer-motion";
-import { fadeInUp, viewportConfig } from "../../../animations";
+import { fadeInUp, viewportConfig } from "../../../animations/animations";
 import './AboutValues.css';
 
 const values = [

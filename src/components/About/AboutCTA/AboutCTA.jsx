@@ -1,6 +1,6 @@
 import { Box, Container, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
-import { fadeInUp, viewportConfig } from "../../../animations";
+import { fadeInUp, viewportConfig } from "../../../animations/animations";
 import { Link } from "react-router";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import './AboutCTA.css';

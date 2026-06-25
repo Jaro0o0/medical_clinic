@@ -2,7 +2,7 @@ import Video from '../../../assets/video2.mp4'
 import './Hero.css'
 import { Box, Typography, Button, Container, Stack } from '@mui/material';
 import { motion } from 'framer-motion';
-import { fadeInUp, fadeIn, staggerContainer } from '../../../animations';
+import { fadeInUp, fadeIn, staggerContainer } from '../../../animations/animations';
 import { Link } from 'react-router';
 
 function Hero() {

@@ -2,7 +2,7 @@ import ImagesImg from '../../../assets/outside.jpg'
 import './ImagesHero.css'
 import { Typography, Box, Container } from '@mui/material';
 import { motion } from 'framer-motion';
-import { fadeInUp, fadeIn } from '../../../animations';
+import { fadeInUp, fadeIn } from '../../../animations/animations';
 
 function ImagesHero() {
     return (  

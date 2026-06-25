@@ -5,7 +5,7 @@ import 'swiper/css/pagination';
 import { Box, Container, Typography, Paper, Avatar, Rating } from '@mui/material';
 import { motion } from 'framer-motion';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
-import { fadeInUp, viewportConfig } from '../../../animations';
+import { fadeInUp, viewportConfig } from '../../../animations/animations';
 import './Testimonies.css';
 
 const testimonials = [
