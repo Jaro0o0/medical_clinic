@@ -1,11 +1,11 @@
 import { Container, Typography, Box, TextField, Button } from "@mui/material";
 import { useForm } from "react-hook-form";
-import './Why.css'
+import './ContactForm.css'
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
 
 
-function Form() {
+function ContactForm() {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
 
@@ -116,4 +116,4 @@ function Form() {
     );
 }
 
-export default Form;
+export default ContactForm;

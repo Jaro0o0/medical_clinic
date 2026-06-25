@@ -1,5 +1,5 @@
 import { Box, Typography, Container, Paper } from "@mui/material";
-import './ServicesMain.css'
+import './OfferCatalog.css'
 import { motion } from "framer-motion";
 
 
@@ -19,7 +19,7 @@ import Img_mag from '../../../assets/imgs/IMG_2072.jpeg'
 import Img_vol from '../../../assets/imgs/services/volume.jpeg'
 import Img_L from '../../../assets/imgs/services/laser.jpeg'
 
-function ServicesMain() {
+function OfferCatalog() {
     const items = [
         {
             title: 'Masaż częściowy kręgosłupa',
@@ -156,4 +156,4 @@ function ServicesMain() {
     );
 }
 
-export default ServicesMain;
+export default OfferCatalog;

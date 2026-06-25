@@ -1,5 +1,5 @@
 import { Container, Box, Typography, Paper, Button } from "@mui/material";
-import './Services.css'
+import './Specializations.css'
 
 import { motion } from "framer-motion";
 import { Link } from "react-router";
@@ -30,7 +30,7 @@ const servicesData = [
     }
 ];
 
-function Services() {
+function Specializations() {
     return (
         <Box sx={{ py: 12, backgroundColor: 'background.alt' }}>
             <Container>
@@ -141,4 +141,4 @@ function Services() {
     );
 }
 
-export default Services;
+export default Specializations;

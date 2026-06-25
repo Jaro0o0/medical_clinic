@@ -1,10 +1,10 @@
 import { Box, Container, Typography } from "@mui/material";
-import ServicesHeroBackground from "../../../assets/outside.jpg";
-import './ServicesHero.css'
+import OfferHeroBackground from "../../../assets/outside.jpg";
+import './OfferHero.css'
 import { motion } from "framer-motion";
 import { fadeInUp, fadeIn } from '../../../animations/animations';
 
-function ServicesHero() {
+function OfferHero() {
     return (  
         <Box className='services-hero-wrapper'>
             <Box
@@ -14,7 +14,7 @@ function ServicesHero() {
                 animate="visible"
                 className='services-hero-bg'
             >
-                <img className='services-header-img' src={ServicesHeroBackground} alt="Oferta background" />
+                <img className='services-header-img' src={OfferHeroBackground} alt="Oferta background" />
                 <Box className='services-hero-overlay' />
             </Box>
             
@@ -76,4 +76,4 @@ function ServicesHero() {
     );
 }
 
-export default ServicesHero;
+export default OfferHero;

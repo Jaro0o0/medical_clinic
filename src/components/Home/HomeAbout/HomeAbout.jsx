@@ -1,11 +1,11 @@
 import { Container, Typography, Box, Button } from "@mui/material";
 import IMG from '../../../assets/outside.jpg'
-import './About.css'
+import './HomeAbout.css'
 import { motion } from "framer-motion";
 import { fadeInUp, fadeInLeft, fadeInRight, viewportConfig } from '../../../animations/animations';
 import { Link } from 'react-router';
 
-function About() {
+function HomeAbout() {
     return (
         <Box sx={{ py: { xs: 10, md: 15 }, backgroundColor: 'background.paper', overflow: 'hidden' }}>
             <Container>
@@ -139,4 +139,4 @@ function About() {
     );
 }
 
-export default About;
+export default HomeAbout;

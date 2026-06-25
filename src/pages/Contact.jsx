@@ -1,14 +1,14 @@
-import Form from "../components/Contact/Why/Why";
+import ContactForm from "../components/Contact/ContactForm/ContactForm";
 import ContactHero from "../components/Contact/ContactHero/ContactHero";
 import Section from "../components/Common/Section/Section";
 import { Box } from "@mui/material";
 
-function contact() {
+function Contact() {
     return (  
         <>
          <ContactHero/>
          <Section>
-            <Form/>
+            <ContactForm/>
          </Section>
          
             <Box sx={{paddingTop: { xs: '60px', md: '120px' }}}>
@@ -24,4 +24,4 @@ function contact() {
     );
 }
 
-export default contact;
+export default Contact;

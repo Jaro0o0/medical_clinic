@@ -6,7 +6,7 @@ import { Box, Container, Typography, Paper, Avatar, Rating } from '@mui/material
 import { motion } from 'framer-motion';
 import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import { fadeInUp, viewportConfig } from '../../../animations/animations';
-import './Testimonies.css';
+import './Testimonials.css';
 
 const testimonials = [
     {
@@ -31,7 +31,7 @@ const testimonials = [
     }
 ];
 
-function Testimonies() {
+function Testimonials() {
     return (
         <Box sx={{ py: 12, backgroundColor: 'background.alt', overflow: 'hidden' }}>
             <Container sx={{ mb: 6 }}>
@@ -127,4 +127,4 @@ function Testimonies() {
     );
 }
 
-export default Testimonies;
+export default Testimonials;

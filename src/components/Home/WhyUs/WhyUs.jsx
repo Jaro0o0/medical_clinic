@@ -1,5 +1,5 @@
 import { Container, Typography, Box, Paper } from "@mui/material";
-import './Offer.css' 
+import './WhyUs.css' 
 import { motion } from "framer-motion";
 import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined';
 import VerifiedUserOutlinedIcon from '@mui/icons-material/VerifiedUserOutlined';
@@ -24,7 +24,7 @@ const features = [
     }
 ];
 
-function Offer() {
+function WhyUs() {
     return ( 
         <Box sx={{ py: 12, backgroundColor: 'background.default' }}>
             <Container>
@@ -107,4 +107,4 @@ function Offer() {
     );
 }
 
-export default Offer;
+export default WhyUs;

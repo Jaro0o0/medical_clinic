@@ -5,7 +5,7 @@ import Home from './pages/Home'
 import Images from './pages/Images'
 import Questions from './pages/Questions'
 import Contact from './pages/Contact'
-import Steps from './pages/Steps'
+import Offer from './pages/Offer'
 import Header from './components/Common/Header/Header'
 import About from './pages/About'
 import Footer from './components/Common/Footer/Footer'
@@ -25,7 +25,7 @@ function App() {
           <Route path='/galeria' element={<Images/>}/> 
           <Route path='/contact' element={<Contact/>}/>
           <Route path='/faq' element={<Questions/>}/>
-          <Route path='/oferta' element={<Steps/>}/>
+          <Route path='/oferta' element={<Offer/>}/>
           <Route path='/o-nas' element={<About/>}/>
         </Routes>
         <Footer/>

@@ -1,5 +1,5 @@
 import { Box, Container, Typography, Grid, Paper, Stack } from "@mui/material";
-import './AboutSecond.css'
+import './AboutHistoryTeam.css'
 import HistoryImg from '../../../assets/outside.jpg'
 import TeamImg from '../../../assets/careers.jpg'
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
@@ -14,7 +14,7 @@ const teamFeatures = [
     "Specjaliści rehabilitacji sportowej"
 ];
 
-function AboutSecond() {
+function AboutHistoryTeam() {
     return ( 
         <Container sx={{ py: 8 }}>
             <Grid container spacing={10}>
@@ -102,4 +102,4 @@ function AboutSecond() {
      );
 }
 
-export default AboutSecond;
+export default AboutHistoryTeam;

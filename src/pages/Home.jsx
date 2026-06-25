@@ -1,9 +1,9 @@
-import About from "../components/Home/About/About";
+import HomeAbout from "../components/Home/HomeAbout/HomeAbout";
 import Hero from "../components/Home/Hero/Hero";
-import Offer from "../components/Home/Offer/Offer";
+import WhyUs from "../components/Home/WhyUs/WhyUs";
 import Section from "../components/Common/Section/Section";
-import Testimonies from "../components/Home/Testimonies/Testimonies";
-import Services from "../components/Home/Services/Services";
+import Testimonials from "../components/Home/Testimonials/Testimonials";
+import Specializations from "../components/Home/Specializations/Specializations";
 
 
 function Home() {
@@ -13,17 +13,17 @@ function Home() {
            <Hero/>
             
             <Section>
-                 <About/>
+                 <HomeAbout/>
             </Section>
             <Section>
-                <Services/>
+                <Specializations/>
             </Section>
             <Section>
-                <Offer/>
+                <WhyUs/>
             </Section>
             
             <Section>
-                <Testimonies/>
+                <Testimonials/>
             </Section>
             
         

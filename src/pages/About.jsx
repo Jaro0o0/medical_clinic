@@ -1,6 +1,6 @@
 import AboutHero from "../components/About/AboutHero/AboutHero";
 import AboutMain from "../components/About/AboutMain/AboutMain";
-import AboutSecond from "../components/About/AboutSecond/AboutSecond";
+import AboutHistoryTeam from "../components/About/AboutHistoryTeam/AboutHistoryTeam";
 import AboutValues from "../components/About/AboutValues/AboutValues";
 import AboutStats from "../components/About/AboutStats/AboutStats";
 import AboutCTA from "../components/About/AboutCTA/AboutCTA";
@@ -17,7 +17,7 @@ function About() {
             <AboutStats/>
             <AboutValues/>
             <Section> 
-                <AboutSecond/>
+                <AboutHistoryTeam/>
             </Section>
             <AboutCTA/>
         </>
