@@ -1,6 +1,6 @@
 import { Container, Box, Typography, Paper, Button } from "@mui/material";
 import './Services.css'
-import ServiceImg from '../../../assets/careers.jpg'
+
 import { motion } from "framer-motion";
 import { Link } from "react-router";
 import { fadeInUp, staggerContainer, hoverScale, viewportConfig } from '../../../animations/animations';
