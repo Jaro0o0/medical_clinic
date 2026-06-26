@@ -5,6 +5,7 @@ import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlin
 import EmojiObjectsOutlinedIcon from '@mui/icons-material/EmojiObjectsOutlined';
 import { motion } from "framer-motion";
 import { fadeInUp, viewportConfig } from "../../../animations/animations";
+import SectionHeader from '../../Common/SectionHeader/SectionHeader';
 import './AboutValues.css';
 
 const values = [
@@ -34,21 +35,12 @@ function AboutValues() {
     return (
         <Box sx={{ py: 10, backgroundColor: 'background.alt' }}>
             <Container>
-                <Box sx={{ textAlign: 'center', mb: 8 }}>
-                    <Typography 
-                        variant="overline" 
-                        color="secondary" 
-                        sx={{ fontWeight: 800, letterSpacing: 2 }}
-                    >
-                        Fundamenty Naszej Pracy
-                    </Typography>
-                    <Typography 
-                        variant="h2" 
-                        sx={{ fontWeight: 800, mt: 1 }}
-                    >
-                        Nasze Wartości
-                    </Typography>
-                </Box>
+                <SectionHeader
+                    overline="Fundamenty Naszej Pracy"
+                    title="Nasze Wartości"
+                    description="Profesjonalizm, rozwój i empatia — to filary, na których budujemy relację z pacjentami."
+                    sx={{ mb: 8 }}
+                />
 
                 <Grid container spacing={4}>
                     {values.map((value, index) => (

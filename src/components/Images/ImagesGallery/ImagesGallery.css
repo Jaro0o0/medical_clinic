@@ -1,15 +1,158 @@
 .gallery-item {
+    position: relative;
     overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.06), 0 2px 4px -2px rgb(0 0 0 / 0.06);
+    transition: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+}
+
+.gallery-item:focus-visible {
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.45),
+        0 12px 24px -8px rgb(0 0 0 / 0.12);
+}
+
+.gallery-item:hover {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+        0 8px 10px -6px rgb(0 0 0 / 0.08);
+    transform: translateY(-4px);
 }
 
 .images-gallery-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
     border-radius: 16px;
-    transition: transform 0.4s ease;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .gallery-item:hover .images-gallery-img {
-    transform: scale(1.2);
+    transform: scale(1.06);
+}
+
+.gallery-item-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 1.5rem;
+    background: linear-gradient(
+        to top,
+        rgba(15, 23, 42, 0.75) 0%,
+        rgba(15, 23, 42, 0.2) 45%,
+        transparent 100%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.gallery-item:hover .gallery-item-overlay,
+.gallery-item:focus-visible .gallery-item-overlay {
+    opacity: 1;
+}
+
+.gallery-item-overlay-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transform: translateY(12px);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover .gallery-item-overlay-content,
+.gallery-item:focus-visible .gallery-item-overlay-content {
+    transform: translateY(0);
+}
+
+.gallery-zoom-icon {
+    color: #7dd3fc !important;
+    font-size: 1.25rem !important;
+}
+
+.gallery-item-title {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.02em;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-lightbox .MuiDialog-paper {
+    background: transparent;
+    box-shadow: none;
+    overflow: visible;
+    max-width: 960px;
+}
+
+.gallery-lightbox-backdrop {
+    background-color: rgba(15, 23, 42, 0.88) !important;
+    backdrop-filter: blur(6px);
+}
+
+.gallery-lightbox-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.gallery-lightbox-close {
+    position: absolute !important;
+    top: -0.5rem;
+    right: -0.5rem;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    color: #0f172a !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.gallery-lightbox-close:hover {
+    background-color: #ffffff !important;
+    transform: scale(1.08);
+}
+
+.gallery-lightbox-img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
+}
+
+.gallery-lightbox-caption {
+    color: #f8fafc !important;
+    font-weight: 600 !important;
+    text-align: center;
+    padding-bottom: 0.5rem;
+}
+
+@media (max-width: 600px) {
+    .gallery-item {
+        border-radius: 16px;
+    }
+
+    .gallery-item-overlay {
+        opacity: 1;
+        background: linear-gradient(
+            to top,
+            rgba(15, 23, 42, 0.55) 0%,
+            transparent 60%
+        );
+    }
+
+    .gallery-item-overlay-content {
+        transform: translateY(0);
+    }
+
+    .gallery-zoom-icon {
+        display: none;
+    }
 }

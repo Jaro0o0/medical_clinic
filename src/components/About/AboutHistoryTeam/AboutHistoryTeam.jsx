@@ -7,6 +7,7 @@ import Diversity3OutlinedIcon from '@mui/icons-material/Diversity3Outlined';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import { motion } from "framer-motion";
 import { fadeInUp, viewportConfig } from '../../../animations/animations';
+import SectionHeader from '../../Common/SectionHeader/SectionHeader';
 
 const teamFeatures = [
     "Dyplomowani fizjoterapeuci",
@@ -17,6 +18,11 @@ const teamFeatures = [
 function AboutHistoryTeam() {
     return ( 
         <Container sx={{ py: 8 }}>
+            <SectionHeader
+                overline="Poznaj nas bliżej"
+                title="Historia i zespół"
+                description="Od ponad dekady łączymy pasję z profesjonalizmem, tworząc zespół, któremu możesz zaufać."
+            />
             <Grid container spacing={10}>
                 {/* Nasza Historia */}
                 <Grid item xs={12}>

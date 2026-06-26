@@ -1,5 +1,6 @@
 import { Container, Typography, Box, TextField, Button } from "@mui/material";
 import { useForm } from "react-hook-form";
+import SectionHeader from "../../Common/SectionHeader/SectionHeader";
 import './ContactForm.css'
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
@@ -24,11 +25,14 @@ function ContactForm() {
     }
     
     return (
-        <Container sx={{ position: "relative" }}>
-            <Typography component='p' color="primary" gutterBottom>KONTAKT</Typography>
-            <Typography variant="h3" component='h1' gutterBottom>Skontaktuj się z nami</Typography>
+        <Container sx={{ position: "relative", py: { xs: 4, md: 8 } }}>
+            <SectionHeader
+                overline="Formularz kontaktowy"
+                title="Skontaktuj się z nami"
+                description="Napisz do nas lub skorzystaj z danych kontaktowych — odpowiemy jak najszybciej."
+            />
 
-            <Box sx={{ 
+            <Box sx={{
                 display: 'grid', 
                 gridTemplateColumns: { xs: '1fr', md: '1fr 1fr' }, 
                 gap: '3rem',

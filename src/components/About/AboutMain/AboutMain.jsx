@@ -2,13 +2,19 @@ import { Container, Typography, Grid, Box, Button } from "@mui/material";
 import AboutImg from '../../../assets/outside.jpg'
 import './AboutMain.css'
 import { motion } from "framer-motion";
-import { fadeInUp, fadeInLeft, fadeInRight, viewportConfig } from '../../../animations/animations';
+import { fadeInLeft, fadeInRight, viewportConfig } from '../../../animations/animations';
+import SectionHeader from '../../Common/SectionHeader/SectionHeader';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Link } from "react-router";
 
 function AboutMain() {
     return ( 
         <Container sx={{ py: { xs: 4, md: 8 } }}>
+            <SectionHeader
+                overline="Nowoczesna Fizjoterapia"
+                title="Dlaczego Kormedic?"
+                description="Gabinet stworzony z myślą o Twoim zdrowiu, komforcie i skutecznej terapii."
+            />
             <Grid container spacing={8} alignItems="center">
                 <Grid item xs={12} md={6}>
                     <Box 
@@ -32,21 +38,6 @@ function AboutMain() {
                         whileInView="visible"
                         viewport={viewportConfig}
                     >
-                        <Typography 
-                            variant="overline" 
-                            color="secondary" 
-                            sx={{ fontWeight: 800, letterSpacing: 2, mb: 1, display: 'block' }}
-                        >
-                            Nowoczesna Fizjoterapia
-                        </Typography>
-                        <Typography 
-                            variant="h2" 
-                            gutterBottom 
-                            sx={{ fontWeight: 800, color: 'primary.main', mb: 3 }}
-                        >
-                            Dlaczego Kormedic?
-                        </Typography>
-                        
                         <Typography variant="body1" color="text.secondary" paragraph sx={{ fontSize: '1.1rem', mb: 3, lineHeight: 1.8 }}>
                             Kormedic to coś więcej niż tylko gabinet. To miejsce stworzone z myślą o Twoim zdrowiu i komforcie. Nasza przestrzeń została zaprojektowana tak, aby sprzyjać regeneracji, a nowoczesne wyposażenie pozwala nam stosować najskuteczniejsze metody terapeutyczne.
                         </Typography>

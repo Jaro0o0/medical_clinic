@@ -4,6 +4,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Container, Box } from '@mui/material';
+import SectionHeader from '../../Common/SectionHeader/SectionHeader';
 import './Faq.css';
 
 function Faq() {
@@ -36,10 +37,12 @@ function Faq() {
 
     return (
         <Box className="faq-wrapper">
-            <Container>
-                <Typography variant="h3" align="center" gutterBottom className="faq-title">
-                    Często zadawane pytania
-                </Typography>
+            <Container sx={{ py: { xs: 4, md: 8 } }}>
+                <SectionHeader
+                    overline="Odpowiedzi na pytania"
+                    title="Często zadawane pytania"
+                    description="Znajdź odpowiedzi na najpopularniejsze pytania dotyczące wizyt i zabiegów."
+                />
                 {questions.map((item, index) => (
                     <Accordion key={index} className="faq-accordion">
                         <AccordionSummary

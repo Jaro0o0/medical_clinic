@@ -1,6 +1,7 @@
 import { Box, Typography, Container, Paper } from "@mui/material";
 import './OfferCatalog.css'
 import { motion } from "framer-motion";
+import SectionHeader from "../../Common/SectionHeader/SectionHeader";
 
 
 import Img_one from '../../../assets/imgs/services/one.jpg'
@@ -115,6 +116,11 @@ function OfferCatalog() {
 
     return (
         <Container sx={{ py: 8 }}>
+            <SectionHeader
+                overline="Zabiegi i terapie"
+                title="Nasza oferta"
+                description="Masaże, elektroterapia, krioterapia i więcej — dobierz zabieg dopasowany do Twoich potrzeb."
+            />
             <Box className='cards' sx={{
                 display: 'grid',
                 gridTemplateColumns: {
