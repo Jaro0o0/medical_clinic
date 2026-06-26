@@ -102,16 +102,16 @@ function ContactForm() {
                     }}>
                         <Box>
                             <Typography variant="h4" gutterBottom className="second-grid-header">Adres</Typography>
-                            <Typography variant="body1" color="#444">Wielopolska 62, 39-200 Dębica</Typography>
+                            <Typography variant="body1" color="#444" sx={{ whiteSpace: 'nowrap' }}>Wielopolska 62, 39-200 Dębica</Typography>
                         </Box>
                         <Box>
                             <Typography variant="h4" gutterBottom className="second-grid-header">Godziny otwarcia</Typography>
-                            <Typography variant="body1" color="#444">Poniedziałek - Piątek 8:00 - 18:00</Typography>
+                            <Typography variant="body1" color="#444" sx={{ whiteSpace: 'nowrap' }}>Poniedziałek - Piątek 8:00 - 18:00</Typography>
                         </Box>
                         <Box>
                             <Typography variant="h4" gutterBottom className="second-grid-header">Kontakt</Typography>
-                            <Typography variant="body1" color="#444">Tel: +48 123 456 789</Typography>
-                            <Typography variant="body1" color="#444">E-mail: kormedickontakt@gmail.com</Typography>
+                            <Typography variant="body1" color="#444" sx={{ whiteSpace: 'nowrap' }}>Tel: +48 123 456 789</Typography>
+                            <Typography variant="body1" color="#444" sx={{ whiteSpace: 'nowrap' }}>E-mail: kormedickontakt@gmail.com</Typography>
                         </Box>
                     </Box>
                 </Box>
