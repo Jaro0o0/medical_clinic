@@ -4,7 +4,9 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Container, Box } from '@mui/material';
+import { motion } from 'framer-motion';
 import SectionHeader from '../../Common/SectionHeader/SectionHeader';
+import { fadeInUp, staggerContainer, viewportConfig } from '../../../animations/animations';
 import './Faq.css';
 
 function Faq() {
@@ -37,30 +39,52 @@ function Faq() {
 
     return (
         <Box className="faq-wrapper">
-            <Container sx={{ py: { xs: 4, md: 8 } }}>
+            <Container maxWidth="lg" sx={{ py: { xs: 4, md: 8 } }}>
                 <SectionHeader
                     overline="Odpowiedzi na pytania"
                     title="Często zadawane pytania"
                     description="Znajdź odpowiedzi na najpopularniejsze pytania dotyczące wizyt i zabiegów."
                 />
-                {questions.map((item, index) => (
-                    <Accordion key={index} className="faq-accordion">
-                        <AccordionSummary
-                            expandIcon={<ExpandMoreIcon />}
-                            aria-controls={`panel${index}-content`}
-                            id={`panel${index}-header`}
-                        >
-                            <Typography className="faq-question">
-                                {item.question}
-                            </Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography color="text.secondary">
-                                {item.answer}
-                            </Typography>
-                        </AccordionDetails>
-                    </Accordion>
-                ))}
+
+                <Box
+                    component={motion.div}
+                    className="faq-list"
+                    variants={staggerContainer}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={viewportConfig}
+                >
+                    {questions.map((item, index) => (
+                        <motion.div key={index} variants={fadeInUp}>
+                            <Accordion
+                                disableGutters
+                                elevation={0}
+                                className="faq-accordion"
+                            >
+                                <AccordionSummary
+                                    expandIcon={<ExpandMoreIcon className="faq-expand-icon" />}
+                                    aria-controls={`panel${index}-content`}
+                                    id={`panel${index}-header`}
+                                    className="faq-accordion-summary"
+                                >
+                                    <Box className="faq-question-row">
+                                        <span className="faq-question-number">
+                                            {String(index + 1).padStart(2, '0')}
+                                        </span>
+                                        <Typography className="faq-question">
+                                            {item.question}
+                                        </Typography>
+                                    </Box>
+                                </AccordionSummary>
+                                <AccordionDetails className="faq-accordion-details">
+                                    <Typography className="faq-answer">
+                                        {item.answer}
+                                    </Typography>
+                                </AccordionDetails>
+                            </Accordion>
+                        </motion.div>
+                    ))}
+                </Box>
             </Container>
         </Box>
     );

@@ -28,16 +28,16 @@ import img9 from "../../../assets/imgs/IMG_2171.jpeg";
 import img10 from "../../../assets/imgs/IMG_2062.jpeg";
 
 const itemData = [
-    { img: img1, title: "Gabinet 1", cols: 2, rows: 2 },
-    { img: img10, title: "Gabinet 6", cols: 1, rows: 1 },
-    { img: img3, title: "Gabinet 3", cols: 1, rows: 1 },
-    { img: img4, title: "Sprzęt 1", cols: 2, rows: 2 },
-    { img: img5, title: "Gabinet 4", cols: 1, rows: 1 },
-    { img: img6, title: "Gabinet 5", cols: 1, rows: 1 },
-    { img: img7, title: "Sprzęt 2", cols: 2, rows: 2 },
-    { img: img8, title: "Wnętrze 1", cols: 1, rows: 1 },
-    { img: img9, title: "Gabinet 6", cols: 1, rows: 1 },
-    { img: img2, title: "Gabinet 2", cols: 3, rows: 2 },
+    { img: img1, title: "Sprzęt 1", cols: 2, rows: 2 },
+    { img: img10, title: "Sprzęt 2", cols: 1, rows: 1 },
+    { img: img3, title: "Wnętrze 1", cols: 1, rows: 1 },
+    { img: img4, title: "Sprzęt 3", cols: 2, rows: 2 },
+    { img: img5, title: "Sprzęt 4", cols: 1, rows: 1 },
+    { img: img6, title: "Sprzęt 5", cols: 1, rows: 1 },
+    { img: img7, title: "Sprzęt 6", cols: 2, rows: 2 },
+    { img: img8, title: "Sprzęt 7", cols: 1, rows: 1 },
+    { img: img9, title: "Sprzęt 8", cols: 1, rows: 1 },
+    { img: img2, title: "Sprzęt 9", cols: 3, rows: 2 },
 ];
 
 function ImagesGallery() {
